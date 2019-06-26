@@ -1,0 +1,93 @@
+:root {
+ --primary-color:#191f28;
+ --secondary-color:#212935;
+ --tertiary-color:#2d3949;
+}
+
+body{
+	color: white;
+	background-color: var(--secondary-color);
+}
+
+img{
+	width: 60%;
+}
+
+[class*=nav] a{
+	color: white;
+}
+
+[class*=nav] a:hover{
+	color: white;
+}
+
+[class*=nav] img{
+	cursor: pointer;
+	width: 50%;
+}
+
+[class*=profile]{
+	width: 40%;
+	border-radius: 10%;
+}
+
+[class*=primary-color]{
+	background-color: var(--primary-color);
+}
+
+[class*=secondary-color]{
+	background-color: var(--secondary-color);
+}
+
+[class*=tertiary-color]{
+	background-color: var(--tertiary-color);
+}
+
+[class*=click]:hover{
+	background-color: var(--tertiary-color);
+	cursor: pointer;
+}
+
+[class*=menu]{
+	border: solid;
+	border-left-width: 20px;
+	border-color: var(--primary-color);
+}
+
+[class*=centerText]{
+	text-align: center;
+}
+
+[class*=cert]:hover{
+	border-color: var(--tertiary-color);
+}
+
+[class*=skill] img{
+	width: 35%;
+}
+
+[class*=weblink]{
+	background-color: var(--primary-color);
+	border:	solid;
+	border-color: var(--tertiary-color);
+	padding: 0 4px 0 4px;
+	margin-left: 6px;
+}
+
+[class*=weblink]:hover{
+	color: black;
+	background-color: var(--tertiary-color);
+	border-color: var(--primary-color);
+	cursor: pointer;
+}
+
+[class*=primary-border]{
+	border: solid;
+	border-width: 20px;
+	border-color: var(--primary-color);
+}
+
+@media (min-width: 1600px) {
+    .container{
+        max-width: 90%;
+    }
