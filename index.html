@@ -9,23 +9,13 @@
   
   <body>
 
-
-  	<!--
-		COLORS:
-			primary-color		=	#191f28;
-			secondary-color		=	#212935;
-			tertiary-color  	=	#2d3949;
-
-  	-->
-
-
   	<!-- Header -->
-   	<div class="row primary-border">
+   	<div class="row primary-border fullwidth">
    		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 primary-color">	<!--Name-->
    			<h1>Niklas Ziermann</h1>
    		</div>
    	</div>
-   	<div class="row menu primary-color">
+   	<div class="row menu primary-color fullwidth">
    		<div class="col-md-6 primary-border">		<!--Subsites (home, projects, contact,...)-->
    			<div class="row">
 				<div class="col-md-2 primary-color nav">
@@ -35,19 +25,19 @@
 	   				<a href="projects.html"><h4>Projects</h4></a>
 	   			</div>
 	   			<div class="col-md-2 primary-color nav">
-	   				<a href="index.html"><h4>Contact</h4></a>
+	   				<a href="contact.html"><h4>Contact</h4></a>
 	   			</div>
    			</div>
    		</div>
    		<div class="col-md-6 primary-border">		<!--Links (hackerrank, github, ...)-->
    			<div class="row">
 	   			<div class="col-md-9"></div>
-	   			<div class="col-md-1 nav">
-	   				<img src="media/hackerrank.png">
-	   			</div>
-	   			<div class="col-md-1 nav">
+	   			<a class="col-md-1 nav" href="https://github.com/N-Ziermann" target="_blank" rel="noopener noreferrer">
 	   				<img src="media/GitHub.png">
-	   			</div>
+	   			</a>
+	   			<a class="col-md-1 nav" href="https://www.hackerrank.com/N_Ziermann" target="_blank" rel="noopener noreferrer">
+	   				<img src="media/hackerrank.png">
+	   			</a>
    			</div>
    		</div>
    	</div>
@@ -79,29 +69,29 @@
    		<div class="row">	<!-- My Projects -->
    			<div class="col-md-12 primary-color">
    				<div class="row">
-   					<div class="col-md-4  click skill centerText primary-border">
+   					<a class="col-md-4 click skill centerText primary-border" href="projects.html#AI">
    						<h2>AI</h2>
    						<img src="media/AI.png">
    						<p>
    							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam ultrices sagittis orci a scelerisque purus semper. Libero volutpat sed cras ornare arcu dui vivamus arcu.
    						</p>
-   					</div>
+   					</a>
 
-   					<div class="col-md-4 click skill centerText primary-border">
+   					<a class="col-md-4 click skill centerText primary-border" href="projects.html#Game">
    						<h2>Game Development</h2>
    						<img src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.decane.net%2Fwp-content%2Fuploads%2F2011%2F05%2FUnity-logo.png&f=1">
    						<p>
    							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam ultrices sagittis orci a scelerisque purus semper. Libero volutpat sed cras ornare arcu dui vivamus arcu.
    						</p>
-   					</div>
+   					</a>
 
-   					<div class="col-md-4 click skill centerText primary-border">
+   					<a class="col-md-4 click skill centerText primary-border" href="projects.html#SE">
    						<h2>Software Engineering</h2>
    						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/768px-Python.svg.png">
    						<p>
    							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam ultrices sagittis orci a scelerisque purus semper. Libero volutpat sed cras ornare arcu dui vivamus arcu.
    						</p>
-   					</div>
+   					</a>
    				</div>
    			</div>
    		</div>
@@ -109,7 +99,7 @@
    		<br>
 
    		<div class="row">	<!-- My Cert -->
-   			<div class="col-md-12 primary-color click cert primary-border">
+   			<a class="col-md-12 primary-color click cert primary-border" href="https://www.freecodecamp.org/certification/ziermann/javascript-algorithms-and-data-structures" target="_blank" rel="noopener noreferrer">
    				<div class="row">
    					<div class="col-md-8">
    						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam ultrices sagittis orci a scelerisque purus semper. Libero volutpat sed cras ornare arcu dui vivamus arcu.
@@ -119,15 +109,23 @@
    					</div>
    					
    				</div>
-   			</div>
+   			</a>
    		</div>
    	</div>
 
    	<br>
 
+   	<center>
+	   	<a href="mailto:n-ziermann@protonmail.com" class="mail" target="_blank" rel="noopener noreferrer">
+			Email Me!
+		</a>
+	</center>
+
+	<br>
+
    	<!-- Footer -->
-   	<div class="row">
-   		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 primary-color">	<!--Name-->
+   	<div class="row fullwidth">
+   		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 primary-color">
    			<p>Niklas Ziermann Copyright © 2019</p>
    		</div>
    	</div>

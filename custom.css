@@ -7,10 +7,16 @@
 body{
 	color: white;
 	background-color: var(--secondary-color);
+
 }
 
 img{
 	width: 60%;
+}
+
+[class*=fullwidth]{
+	width: 100%;
+	margin: 0;
 }
 
 [class*=nav] a{
@@ -58,8 +64,23 @@ img{
 	text-align: center;
 }
 
+[class*=cert]{
+	color: white;
+}
+
 [class*=cert]:hover{
 	border-color: var(--tertiary-color);
+	text-decoration: none;
+	color: white;
+}
+
+[class*=skill]{
+	color: white;
+}
+
+[class*=skill]:hover{
+	color: white;
+	text-decoration: none;
 }
 
 [class*=skill] img{
@@ -87,7 +108,23 @@ img{
 	border-color: var(--primary-color);
 }
 
+[class*=mail]{
+	background-color: var(--tertiary-color);
+	border:solid;
+	border-width: 5px;
+	border-color: var(--primary-color);
+	color: black;
+	padding: 7px;
+}
+
+[class*=mail]:hover{
+	background-color: var(--primary-color);
+	border-color: var(--tertiary-color);
+	color: white;
+	text-decoration: none;
+}
+
 @media (min-width: 1600px) {
     .container{
         max-width: 90%;
-    }
+}
