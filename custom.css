@@ -23,6 +23,19 @@ a:hover{
 	text-decoration: none;
 }
 
+#topArrow{
+	border: solid white;
+  	border-width: 0 6px 6px 0;
+  	display: inline-block;
+  	padding: 6px;
+  	transform: rotate(-135deg);
+  	margin-top: 10px;
+}
+
+#topArrow:hover{
+	border-color: black;
+}
+
 #mainImage{
 	width: 80%;
 }
