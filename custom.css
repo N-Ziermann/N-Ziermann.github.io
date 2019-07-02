@@ -59,9 +59,9 @@ a:hover{
 }
 
 [class*=profile]{
-	width: 40%;
-	border-radius: 10%;
+	width: 50%;
 }
+
 
 [class*=primary-color]{
 	background-color: var(--primary-color);
@@ -98,7 +98,7 @@ a:hover{
 	width:80%;
 } 
 
-[class*=cert]:hover{
+[class*=cert]:hover *{
 	border-color: var(--tertiary-color);
 	text-decoration: none;
 	color: white;
@@ -152,6 +152,10 @@ a:hover{
 	border-color: var(--tertiary-color);
 	color: white;
 	text-decoration: none;
+}
+
+[class*=thumbnail] img{
+	width: 75%;
 }
 
 [class*=selectionImage]{
