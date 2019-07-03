@@ -45,23 +45,18 @@ a:hover{
 	margin: 0;
 }
 
-[class*=nav] a{
+[class*=nav]{
 	color: white;
 }
 
-[class*=nav] a:hover{
+[class*=nav]:hover{
 	color: white;
 	text-decoration: underline;
-}
-
-[class*=nav] img{
-	cursor: pointer;
 }
 
 [class*=profile]{
 	width: 50%;
 }
-
 
 [class*=primary-color]{
 	background-color: var(--primary-color);
@@ -115,6 +110,16 @@ a:hover{
 
 [class*=skill] img{
 	width: 35%;
+	
+	border:solid;
+	border-width: 10px 0 10px 0;
+	border-color: var(--primary-color);
+}
+
+[class*=skill]:hover img{
+	color: white;
+	text-decoration: none;
+	border-color: var(--tertiary-color);
 }
 
 [class*=weblink]{
