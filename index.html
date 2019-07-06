@@ -5,6 +5,7 @@
     <title>Niklas Ziermann - Portfolio</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="custom.css">
+    <script src="translations.js"></script>
   </head>
   
   <body>
@@ -12,12 +13,16 @@
   	<!-- Header -->
    	<div class="row fullwidth primary-color">
    		<h1 class="primary-border">Niklas Ziermann</h1>
+      
+      <button onclick="setLanguage('de')" id="langButton">Deutsch</button>
+      <button onclick="setLanguage('en')" id="langButton">English</button>
+
    	</div>
    	<div class="menu primary-color fullwidth">
          <div class="row">
-            <a class="primary-border nav" href="index.html"><h4>Home</h4></a>
-            <a class="primary-border nav" href="projects.html"><h4>Projects</h4></a>
-            <a class="primary-border nav" href="contact.html"><h4>Contact</h4></a>
+            <a class="primary-border nav" href="index.html"><h4 id="home">Home</h4></a>
+            <a class="primary-border nav" href="projects.html"><h4 id="projects">Projects</h4></a>
+            <a class="primary-border nav" href="contact.html"><h4 id="contact">Contact</h4></a>
             <a class="primary-border nav" href="https://github.com/N-Ziermann" target="_blank" rel="noopener noreferrer"><h4>GitHub</h4></a>
          </div>
    	</div>
@@ -29,13 +34,13 @@
    			<div class="col-md-12 primary-color">
    				<div class="row">
    					<div class="col-lg-8 primary-color centerText primary-border">
-   						<h2>I'm a Software Engineer</h2>
+   						<h2 id="whatAmI">I'm a Software Engineer</h2>
    						<br>
-   						<h5>Experienced in <i>Python and JavaScript</i></h5>
+   						<h5 id="experience">Experienced in Python and JavaScript</h5>
    						<br>
-   						<h5>Working on <i>AI, Games, IoT and Networking</i></h5>
+   						<h5 id="whatIdo">Working on AI, Games, IoT and Networking</h5>
    						<br>
-   						<h5>Tools I use: <i>Unity3D, Tensorflow.js and Django</i></h5>
+   						<h5 id="tools">Tools I use: Unity3D, Tensorflow.js and Django</h5>
       				</div>
    					<div class="col-lg-4 primary-color primary-border">
    						<center><img src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.oQ9LugJKGKdPLyLxt575bwHaHa%26pid%3DApi&f=1" class="profile rounded"></center>
@@ -50,9 +55,9 @@
    			<div class="col-md-12 primary-color">
    				<div class="row">
    					<a class="col-lg-4 col-md-12 col-sm-12 col-xs-12 click skill centerText primary-border" href="projects.html#AI">
-   						<h2>Artificial Intelligence</h2>
+   						<h2 id="AI-header">Artificial Intelligence</h2>
    						<img src="media/AI.png">
-   						<p>
+   						<p id="AI-text">
    							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam ultrices sagittis orci a scelerisque purus semper. Libero volutpat sed cras ornare arcu dui vivamus arcu.
    						</p>
    					</a>
@@ -82,6 +87,7 @@
    			<a class="col-md-12 primary-color click cert" href="https://www.freecodecamp.org/certification/ziermann/javascript-algorithms-and-data-structures" target="_blank" rel="noopener noreferrer">
    				<div class="row">
    					<div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 primary-border">
+                     <h3>Certified in Algorithms and Data Structures</h3>
    						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam ultrices sagittis orci a scelerisque purus semper. Libero volutpat sed cras ornare arcu dui vivamus arcu.
    					</div>
    					<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 primary-border">
@@ -112,6 +118,28 @@
    			<a href="#" id="topArrow"></a>
    		</div>
    	</div>
+
+    
+    <script type="text/javascript">   
+      // check if url contains language settings
+      switch(document.URL.split("?")[1]){
+        case "de":
+          localStorage.setItem("lang", "de")
+          break
+        case "en":
+          localStorage.setItem("lang", "en")
+          break
+      }
+      // check settings if site needs to be translated
+      switch(localStorage.getItem("lang")){
+        case null:
+          localStorage.setItem("lang", "en")
+          break
+        case "de":
+          translate("de")
+          break
+      }
+    </script>
 
   </body>
 </html>

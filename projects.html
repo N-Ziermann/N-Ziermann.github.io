@@ -5,6 +5,7 @@
     <title>Niklas Ziermann - Projects</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="custom.css">
+    <script src="translations.js"></script>
   </head>
 <body>
 
@@ -14,9 +15,9 @@
       </div>
    	<div class="menu primary-color fullwidth">
          <div class="row">
-            <a class="primary-border nav" href="index.html"><h4>Home</h4></a>
-            <a class="primary-border nav" href="projects.html"><h4>Projects</h4></a>
-            <a class="primary-border nav" href="contact.html"><h4>Contact</h4></a>
+            <a class="primary-border nav" href="index.html"><h4 id="home">Home</h4></a>
+            <a class="primary-border nav" href="projects.html"><h4 id="projects">Projects</h4></a>
+            <a class="primary-border nav" href="contact.html"><h4 id="contact">Contact</h4></a>
             <a class="primary-border nav" href="https://github.com/N-Ziermann" target="_blank" rel="noopener noreferrer"><h4>GitHub</h4></a>
          </div>
       </div>
@@ -157,6 +158,27 @@
    			<a href="#" id="topArrow"></a>
    		</div>
    	</div>
+
+      <script type="text/javascript">   
+         // check if url contains language settings
+         switch(document.URL.split("?")[1]){
+           case "de":
+             localStorage.setItem("lang", "de")
+             break
+           case "en":
+             localStorage.setItem("lang", "en")
+             break
+         }
+         // check settings if site needs to be translated
+         switch(localStorage.getItem("lang")){
+           case null:
+             localStorage.setItem("lang", "en")
+             break
+           case "de":
+             translate("de")
+             break
+         }
+      </script>
 
 </body>
 </html>

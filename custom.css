@@ -163,10 +163,6 @@ a:hover{
 	width: 75%;
 }
 
-[class*=selectionImage]{
-	width: 100%;
-}
-
 [class*=selectionImage]:hover{
 	cursor: pointer;
 }

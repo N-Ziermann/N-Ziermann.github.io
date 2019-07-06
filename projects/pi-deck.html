@@ -5,6 +5,7 @@
     <title>Niklas Ziermann - Pi Deck</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../custom.css">
+    <script src="translations.js"></script>
   </head>
   
   <body>
@@ -15,9 +16,9 @@
     </div>
    <div class="menu primary-color fullwidth">
     <div class="row">
-      <a class="primary-border nav" href="../index.html"><h4>Home</h4></a>
-      <a class="primary-border nav" href="../projects.html"><h4>Projects</h4></a>
-      <a class="primary-border nav" href="../contact.html"><h4>Contact</h4></a>
+      <a class="primary-border nav" href="index.html"><h4 id="home">Home</h4></a>
+      <a class="primary-border nav" href="projects.html"><h4 id="projects">Projects</h4></a>
+      <a class="primary-border nav" href="contact.html"><h4 id="contact">Contact</h4></a>
       <a class="primary-border nav" href="https://github.com/N-Ziermann" target="_blank" rel="noopener noreferrer"><h4>GitHub</h4></a>
     </div>
   </div>
@@ -25,39 +26,35 @@
    	<br>
 
    	<div class="container primary-color">
+      <center class="primary-border"><h2><b>Pi-Deck</b></h2></center>
    		<div class="row">
-   			<div class="col-md-6 primary-border">
-   				<center>
-   					<div>
-   						<img src="../media/stream.png" id="mainImage">
-   					</div>
-	   				<div class="row primary-border col-md-10">
-	   					<div class="col-md-4">
-	   						<img src="../media/stream.png" class="selectionImage h-100" onclick="switchContent('../media/stream.png')">
-	   					</div>
-	   					<div class="col-md-4">
-	   						<video src="../media/pideck-setup.mp4" class="selectionImage h-100" onclick="switchContent('../media/pideck-setup.mp4')">
-	   					</div>
-	   					<div class="col-md-4">
-	   						<img src="../media/placeholder.png" class="selectionImage h-100" onclick="switchContent('../media/placeholder.png')">
-	   					</div>
-	   				</div>
-   				</center>
-   				
+   			<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+
+           
+            <center>
+
+   						<img src="../media/stream.png">
+
+            </center>
+            <br>
+
+
 
    			</div>
-   			<div class="col-md-6 primary-border">
-   				<h3><b>Pi-Deck</b></h3>
-   				<p>The pi-deck is a raspberry-pi based macro tool inspired by the elgato stream deck that can be used wirelessly and is configured through the webbrowser.</p>
-   				<p>The configuration page is based on <i>django</i> and stores the pi-deck's commands inside a <i>sqlite3 database</i>.
-   					<br>This database then gets accessed through the <i>PyQt5</i> based GUI program.
-   					<br>When now pressing one of the twelfe Buttons in the GUI, the command associated with it will be send to the PC that's meant to be controlled with the pi-deck.
+   			<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+   				<h5>The pi-deck is a raspberry-pi based macro tool inspired by the elgato stream deck that can be used wirelessly and is configured through the webbrowser.</h5>
+   				<h5>The configuration page is based on <i>django</i> and stores the pi-deck's commands inside a <i>sqlite3 database</i>.
+   					<br>This database then gets accessed through the <i>PyQt5</i> based GUI program.</h5>
+   					<h5>When now pressing one of the twelfe Buttons in the GUI, the command associated with it will be send to the PC that's meant to be controlled with the pi-deck.
    					<br>This PC wil then interpret the command and do one of four things:
-   					<li>Open a program or file</li>
-   					<li>Open a webpage</li>
-   					<li>Type a string</li>
-   					<li>Press a certain key combination</li>
-   				</p>
+   					<br><br>
+            <ul>
+              <li>Open a program or file</li>
+     					<li>Open a webpage</li>
+     					<li>Type a string</li>
+     					<li>Press a certain key combination</li>
+            </ul>
+   				</h4>
    				<br>
    				<a href="https://github.com/N-Ziermann/pi-deck" target="_blank" rel="noopener noreferrer"><center><h3 class="weblink">Github</h3></center></a>
    			</div>
@@ -87,20 +84,25 @@
    
 
 
-   	<script type="text/javascript">
-   		
-   		let mainImageContainer = document.getElementById("mainImage").parentElement;
-   		
-   		function switchContent(url){
-   			var end = url.substr(url.length - 3);
-			
-			if(end == "png")
-				mainImageContainer.innerHTML = '<img src="' + url + '" id="mainImage">'
-			
-			else if (end == "mp4")
-				mainImageContainer.innerHTML = '<video src="' + url + '" id="mainImage" class="selectionImage" controls>'
-   		}
-
-   	</script>
+   	<script type="text/javascript">   
+      // check if url contains language settings
+      switch(document.URL.split("?")[1]){
+        case "de":
+          localStorage.setItem("lang", "de")
+          break
+        case "en":
+          localStorage.setItem("lang", "en")
+          break
+      }
+      // check settings if site needs to be translated
+      switch(localStorage.getItem("lang")){
+        case null:
+          localStorage.setItem("lang", "en")
+          break
+        case "de":
+          translate("de")
+          break
+      }
+    </script>
 </body>
 </html>
