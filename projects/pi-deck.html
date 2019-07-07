@@ -5,7 +5,7 @@
     <title>Niklas Ziermann - Pi Deck</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../custom.css">
-    <script src="translations.js"></script>
+    <script src="../translations.js"></script>
   </head>
   
   <body>
@@ -42,19 +42,19 @@
 
    			</div>
    			<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-   				<h5>The pi-deck is a raspberry-pi based macro tool inspired by the elgato stream deck that can be used wirelessly and is configured through the webbrowser.</h5>
-   				<h5>The configuration page is based on <i>django</i> and stores the pi-deck's commands inside a <i>sqlite3 database</i>.
-   					<br>This database then gets accessed through the <i>PyQt5</i> based GUI program.</h5>
-   					<h5>When now pressing one of the twelfe Buttons in the GUI, the command associated with it will be send to the PC that's meant to be controlled with the pi-deck.
-   					<br>This PC wil then interpret the command and do one of four things:
-   					<br><br>
-            <ul>
-              <li>Open a program or file</li>
-     					<li>Open a webpage</li>
-     					<li>Type a string</li>
-     					<li>Press a certain key combination</li>
-            </ul>
-   				</h4>
+   				<h5 id="pi-deck-intro">The pi-deck is a raspberry-pi based macro tool inspired by the elgato stream deck that can be used wirelessly and is configured through the webbrowser.</h5>
+   				<h5 id="pi-deck-config">The configuration page is based on <i>django</i> and stores the pi-deck's commands inside a <i>sqlite3 database</i>.
+   				<br>This database then gets accessed through the <i>PyQt5</i> based GUI program.</h5>
+   				<h5 id="pi-deck-usage">When now pressing one of the twelfe Buttons in the GUI, the command associated with it will be send to the PC that's meant to be controlled with the pi-deck.
+   				<br>This PC wil then interpret the command and do one of four things:
+   				<br><br>
+          <ul>
+            <li>Open a program or file</li>
+     			  <li>Open a webpage</li>
+     				<li>Type a string</li>
+     				<li>Press a certain key combination</li>
+          </ul>
+   				</h5>
    				<br>
    				<a href="https://github.com/N-Ziermann/pi-deck" target="_blank" rel="noopener noreferrer"><center><h3 class="weblink">Github</h3></center></a>
    			</div>
@@ -99,8 +99,8 @@
         case null:
           localStorage.setItem("lang", "en")
           break
-        case "de":
-          translate("de")
+        default:
+          translate(localStorage.getItem("lang"))
           break
       }
     </script>

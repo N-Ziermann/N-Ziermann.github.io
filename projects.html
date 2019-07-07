@@ -5,7 +5,7 @@
     <title>Niklas Ziermann - Projects</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="custom.css">
-    <script src="translations.js"></script>
+    <script src="./translations.js"></script>
   </head>
 <body>
 
@@ -28,21 +28,21 @@
 
    	<div class="container">
    		<a name="AI"></a>
-   		<h2><b>Artificial Intelligence</b></h2>
+   		<h2><b id="AI-header">Artificial Intelligence</b></h2>
    		<div class="row primary-border primary-color ">
    			<div class="col-md-12 ">
    				<div class="row">
    					<div class="col-md-8">
    						<div class="row">
    							<div class="col-md-3">
-   								<h2>Placeholder</h2>
+   								<h2 id="Ai1-header">Placeholder</h2>
    							</div>
    							<div class="col-md-3 row">
 	   							<a href=""><h3 class="weblink">Project</h3></a>
    								<a href="" target="_blank" rel="noopener noreferrer"><h3 class="weblink">Github</h3></a>
 	   						</div>
    						</div>
-   						<p>
+   						<p id="Ai1-text">
    							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
    						</p>
    					</div>
@@ -56,21 +56,21 @@
    		<br>
 
    		<a name="Game"></a>
-   		<h2><b>Game Development</b></h2>
+   		<h2><b id="game-header">Game Development</b></h2>
    		<div class="row primary-border primary-color ">
    			<div class="col-md-12 ">
    				<div class="row">
    					<div class="col-md-8">
    						<div class="row">
    							<div class="col-md-3">
-   								<h2>Placeholder</h2>
+   								<h2 id="game1-header">Placeholder</h2>
    							</div>
    							<div class="col-md-3 row">
    								<a href=""><h3 class="weblink">Project</h3></a>
    								<a href="" target="_blank" rel="noopener noreferrer"><h3 class="weblink">Github</h3></a>
 	   						</div>
    						</div>
-   						<p>
+   						<p id="game1-text">
    							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
    						</p>
    					</div>
@@ -84,21 +84,21 @@
    		<br>
 
    		<a name="SE"></a>
-   		<h2><b>Software Development</b></h2>
+   		<h2><b id="software-header">Software Development</b></h2>
    		<div class="row primary-border primary-color">
    			<div class="col-md-12 ">
    				<div class="row">
    					<div class="col-md-8">
    						<div class="row">
    							<div class="col-md-3">
-   								<h2>Pi-Deck</h2>
+   								<h2 id="software1-header">Pi-Deck</h2>
    							</div>
    							<div class="col-md-3 row">
 	   							<a href="projects/pi-deck.html"><h3 class="weblink">Project</h3></a>
    								<a href="https://github.com/N-Ziermann/pi-deck" target="_blank" rel="noopener noreferrer"><h3 class="weblink">Github</h3></a>
 	   						</div>
    						</div>
-   						<p>
+   						<p id="software1-text">
    							A raspberry-pi based macro tool inspired by the elgato stream deck that can be used wirelessly and is configured through the webbrowser. 
 
    						</p>
@@ -118,14 +118,14 @@
    					<div class="col-md-8">
    						<div class="row">
    							<div class="col-md-3">
-   								<h2>Placeholder</h2>
+   								<h2 id="software2-header">Placeholder</h2>
    							</div>
    							<div class="col-md-3 row">
 	   							<a href=""><h3 class="weblink">Project</h3></a>
    								<a href="" target="_blank" rel="noopener noreferrer"><h3 class="weblink">Github</h3></a>
 	   						</div>
    						</div>
-   						<p>
+   						<p id="software2-text">
    							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
    						</p>
    					</div>
@@ -174,8 +174,8 @@
            case null:
              localStorage.setItem("lang", "en")
              break
-           case "de":
-             translate("de")
+           default:
+             translate(localStorage.getItem("lang"))
              break
          }
       </script>

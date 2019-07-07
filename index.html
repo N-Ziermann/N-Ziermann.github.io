@@ -13,11 +13,7 @@
   	<!-- Header -->
    	<div class="row fullwidth primary-color">
    		<h1 class="primary-border">Niklas Ziermann</h1>
-      
-      <button onclick="setLanguage('de')" id="langButton">Deutsch</button>
-      <button onclick="setLanguage('en')" id="langButton">English</button>
-
-   	</div>
+  	</div>
    	<div class="menu primary-color fullwidth">
          <div class="row">
             <a class="primary-border nav" href="index.html"><h4 id="home">Home</h4></a>
@@ -63,17 +59,17 @@
    					</a>
 
    					<a class="col-lg-4 col-md-12 col-sm-12 col-xs-12 click skill centerText primary-border" href="projects.html#Game">
-   						<h2>Game Development</h2>
+   						<h2 id="game-header">Game Development</h2>
    						<img src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.decane.net%2Fwp-content%2Fuploads%2F2011%2F05%2FUnity-logo.png&f=1">
-   						<p>
+   						<p id="game-text">
    							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam ultrices sagittis orci a scelerisque purus semper. Libero volutpat sed cras ornare arcu dui vivamus arcu.
    						</p>
    					</a>
 
    					<a class="col-lg-4 col-md-12 col-sm-12 col-xs-12 click skill centerText primary-border" href="projects.html#SE">
-   						<h2>Software Development</h2>
+   						<h2 id="software-header">Software Development</h2>
    						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/768px-Python.svg.png">
-   						<p>
+   						<p id="software-text">
    							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam ultrices sagittis orci a scelerisque purus semper. Libero volutpat sed cras ornare arcu dui vivamus arcu.
    						</p>
    					</a>
@@ -87,9 +83,9 @@
    			<a class="col-md-12 primary-color click cert" href="https://www.freecodecamp.org/certification/ziermann/javascript-algorithms-and-data-structures" target="_blank" rel="noopener noreferrer">
    				<div class="row">
    					<div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 primary-border">
-                     <h3>Certified in Algorithms and Data Structures</h3>
-   						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam ultrices sagittis orci a scelerisque purus semper. Libero volutpat sed cras ornare arcu dui vivamus arcu.
-   					</div>
+              <h3 id="cert-header">Certified in Algorithms and Data Structures</h3>
+   						<p id="cert-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam ultrices sagittis orci a scelerisque purus semper. Libero volutpat sed cras ornare arcu dui vivamus arcu<p>
+            </div>
    					<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 primary-border">
    						<center><img src="media/JS-Cert.png"></center>
    					</div>
@@ -135,8 +131,8 @@
         case null:
           localStorage.setItem("lang", "en")
           break
-        case "de":
-          translate("de")
+        default:
+          translate(localStorage.getItem("lang"))
           break
       }
     </script>

@@ -24,8 +24,8 @@
   <br>
 
   <div class="container primary-color primary-border">
-   	<h2>Get in contact</h2>
-		<p>Phone: 1 - 555 555 5555</p>
+   	<h2 id="touch">Get in touch</h2>
+		<p id="phone">Phone: 1 - 555 555 5555</p>
 		<p>Email: n-ziermann@protonmail.com</p>
 		<a href="mailto:n-ziermann@protonmail.com" class="mail" target="_blank" rel="noopener noreferrer">
 			Email Me!
@@ -47,8 +47,8 @@
       case null:
         localStorage.setItem("lang", "en")
         break
-      case "de":
-        translate("de")
+      default:
+        translate(localStorage.getItem("lang"))
         break
       }
   </script>
