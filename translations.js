@@ -15,13 +15,13 @@ var translations = {	//object that contains all translations
 		"whatIdo" : "Working on AI, Games, IoT and Networking",
 		"tools" : "Tools I use: Unity3D, Tensorflow.js and Django",
 		"AI-header": "Artificial Intelligence",
-		"AI-text": "Lorem ipsum-eng",
+		"AI-text": "My projects for solving mashine learning problems in Python and JavaScripts using Tensorflow.",
 		"game-header": "Game Development",
-		"game-text": "Lorem ipsum-de",
+		"game-text": "Game Development Projects ranging from Game-Jam-Submissions to Fantasy-Console-Games.",
 		"software-header": "Software Development",
-		"software-text": "Lorem ipsum-de",
+		"software-text": "Software Development Projects like Internet of Things Devices or Full-Stack-Webdevelopment.",
 		"cert-header": "Certified in Algorithms and Data Structures",
-		"cert-text": "Lorem ipsum-de",
+		"cert-text": "This certificate from freecodecamp.org represents approximately 300 hours of coursework in the field of Algorithms and Data Structures.",
 
 
 		// projects.html-texts:
@@ -32,7 +32,7 @@ var translations = {	//object that contains all translations
 		"game1-text" : "Lorem ipsum-eng",
 
 		"software1-header" : "Pi-Deck",
-		"software1-text" : "A raspberry-pi based macro tool inspired by the elgato stream deck that can be used wirelessly and is configured through the webbrowser.",
+		"software1-text" : "A raspberry-pi based macro tool inspired by the elgato stream deck that can be used wirelessly and is configured through the webbrowser.<br><br>Made with Python",
 		
 		"software2-header" : "Placeholder",
 		"software2-text" : "Lorem ipsum-eng",
@@ -58,18 +58,18 @@ var translations = {	//object that contains all translations
 
 
 		// index.html-texts:
-		"whatAmI" : "Ich bin  Software-Ingenieur",
-		"experience" : "Ich schreibe in Python und JavaScript",
+		"whatAmI" : "Ich bin Software-Ingenieur",
+		"experience" : "Ich schreibe primär in Python und JavaScript",
 		"whatIdo" : "Ich arbeite an IoT, Netzwerkskripts, KI und Spielen",
 		"tools" : "Ich nutze Tensorflow.js, Django und Unity3D",
 		"AI-header": "Künstliche Intelligenz",
-		"AI-text": "Lorem ipsum-de",
+		"AI-text": "Meine Projekte zur Lösung von Mashine-Learning-Problemen, welche in Python und JavaScript mit Hilfe von Tensorflow geschrieben sind.",
 		"game-header": "Spieleentwicklung",
-		"game-text": "Lorem ipsum-de",
+		"game-text": "Spieleentwicklungsprojekte wie Fantasy-Console-Spiele oder die Teilnahme an Game-Jams.",
 		"software-header": "Softwareentwicklung",
-		"software-text": "Lorem ipsum-de",
+		"software-text": "Softwareentwicklungsprojekte wie IoT Geräte oder Full-Stack-Webentwicklung.",
 		"cert-header": "Zertifiziert in Algorithmen and Datenstrukturen",
-		"cert-text": "Lorem ipsum-de",
+		"cert-text": "Diese Zertifikat von freecodecamp.org representiert etwa 300 Stunden an Kursarbeit im Feld der Algorithmen und Datenstrukturen.",
 
 
 		// projects.html-texts:
@@ -80,7 +80,7 @@ var translations = {	//object that contains all translations
 		"game1-text" : "Lorem ipsum-de",
 		
 		"software1-header" : "Pi-Deck",
-		"software1-text" : "Ein auf dem Raspberry-pi basierender Macro-Kontroller, welcher vom Elgato-Stream-Deck inspiriert ist und, durch die Nutzung einer Webkonfiguration, sogar kabellos funktioniert.",
+		"software1-text" : "Ein auf dem Raspberry-pi basierender Macro-Kontroller, welcher vom Elgato-Stream-Deck inspiriert ist und, durch die Nutzung einer Webkonfiguration, sogar kabellos funktioniert.<br><br>Geschrieben in Python",
 		
 		"software2-header" : "Platzhalter",
 		"software2-text" : "Lorem ipsum-de",
