@@ -7,7 +7,6 @@
 body{
 	color: white;
 	background-color: var(--secondary-color);
-
 }
 
 img{
@@ -40,13 +39,15 @@ a:hover{
 	width: 80%;
 }
 
-[class*=fullwidth]{
-	width: 100%;
+[class*=row]{
 	margin: 0;
 }
 
 [class*=nav]{
 	color: white;
+	border-right: solid;
+	border-right-width: 20px;
+	border-right-color: var(--primary-color);
 }
 
 [class*=nav]:hover{
