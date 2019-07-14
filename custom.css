@@ -124,7 +124,7 @@ a:hover{
 }
 
 [class*=weblink]{
-	background-color: var(--primary-color);
+	background-color: var(--tertiary-color);
 	border:	solid;
 	border-color: var(--tertiary-color);
 	padding: 0 4px 0 4px;
@@ -133,7 +133,6 @@ a:hover{
 
 [class*=weblink]:hover{
 	color: black;
-	background-color: var(--tertiary-color);
 	border-color: var(--primary-color);
 	cursor: pointer;
 }
