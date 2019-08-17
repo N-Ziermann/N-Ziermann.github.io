@@ -6,9 +6,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../custom.css">
     <script src="../translations.js"></script>
-    <!--  Unity WebGL Dependecies: -->
-    <script src="blind/TemplateData/UnityProgress.js"></script>
-    <script src="blind/Build/UnityLoader.js"></script>
   </head>
   
   <body>
@@ -30,32 +27,23 @@
 
    	<div class="container primary-color">
       <center class="primary-border"><h2><b>Love Potion</b></h2></center>
-   		<div class="row">
+   		
+      <div class="row">
    			<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-
-           
-            <center>
-              <!-- Unity Player -->
-   						<div class="webgl-content">
-                <div id="gameContainer" style="width: 960px; height: 600px"></div>
-                <div class="footer">
-                  <div class="webgl-logo"></div>
-                  <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
-                </div>
-              </div>
-
-            </center>
-            <br>
-
-
-
+            <iframe id="game" src="https://i.simmer.io/@Salkiniklas/~d30ed4bf-b03e-e7c1-f3ab-1e66c9fecdd6" style="width:100%; border:0;"></iframe>
    			</div>
+
    			<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
    				<h5 id="love-potion-one">Love Potion is a jump and run made in a group of 4 people within a week.</h5>
    				<h5 id="love-potion-two">It was made for the second Brackey's Game Jam and scored 23 place out of 325 entries.</h5>
    				<h5 id="love-potion-three">I was the main coder and only got assistance near the end to do some final bugfixing.</h5>
    				<br>
-   				<a><center><h3>Closed Source!</h3></center></a>
+   				<center>
+            <h3>Closed Source!</h3>
+            <br>
+            <iframe frameborder="0" src="https://itch.io/embed/374901?linkback=true&amp;border_width=5&amp;bg_color=191f28&amp;fg_color=ffffff&amp;border_color=191f28" width="560" height="175"></iframe>
+          </center>
+
    			</div>
    		</div>
    	</div>
@@ -84,8 +72,24 @@
 
 
    	<script type="text/javascript">   
-      //instantiate game
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/blind.json", {onProgress: UnityProgress});
+      //function to check for page resize
+      var addEvent = function(object, type, callback) {
+          if (object == null || typeof(object) == 'undefined') return;
+          if (object.addEventListener) {
+              object.addEventListener(type, callback, false);
+          } else if (object.attachEvent) {
+              object.attachEvent("on" + type, callback);
+          } else {
+              object["on"+type] = callback;
+          }
+      };
+      //constantly keep game's aspect ration right
+      resizeGame()
+      addEvent(window, "resize", resizeGame);
+      function resizeGame(){
+        var game = document.getElementById("game");
+        game.style.height = (game.clientWidth / 16 * 9) + "px";
+      }
       // check if url contains language settings
       switch(document.URL.split("?")[1]){
         case "de":
