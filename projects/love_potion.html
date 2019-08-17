@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Niklas Ziermann - Love Potion</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../custom.css">
+    <script src="../translations.js"></script>
+    <!--  Unity WebGL Dependecies: -->
+    <script src="blind/TemplateData/UnityProgress.js"></script>
+    <script src="blind/Build/UnityLoader.js"></script>
+  </head>
+  
+  <body>
+
+  	<!-- Header -->
+   	<div class="row primary-color">
+      <h1 class="primary-border">Niklas Ziermann</h1>
+    </div>
+    <div class="menu primary-color">
+         <div class="row">
+            <a class="nav" href="../index.html"><h4 id="home">Home</h4></a>
+            <a class="nav" href="../projects.html"><h4 id="projects">Projects</h4></a>
+            <a class="nav" href="../contact.html"><h4 id="contact">Contact</h4></a>
+            <a class="nav" href="https://github.com/N-Ziermann" target="_blank" rel="noopener noreferrer"><h4>GitHub</h4></a>
+         </div>
+    </div>
+
+   	<br>
+
+   	<div class="container primary-color">
+      <center class="primary-border"><h2><b>Love Potion</b></h2></center>
+   		<div class="row">
+   			<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+
+           
+            <center>
+              <!-- Unity Player -->
+   						<div class="webgl-content">
+                <div id="gameContainer" style="width: 960px; height: 600px"></div>
+                <div class="footer">
+                  <div class="webgl-logo"></div>
+                  <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+                </div>
+              </div>
+
+            </center>
+            <br>
+
+
+
+   			</div>
+   			<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+   				<h5 id="love-potion-one">Love Potion is a jump and run made in a group of 4 people within a week.</h5>
+   				<h5 id="love-potion-two">It was made for the second Brackey's Game Jam and scored 23 place out of 325 entries.</h5>
+   				<h5 id="love-potion-three">I was the main coder and only got assistance near the end to do some final bugfixing.</h5>
+   				<br>
+   				<a><center><h3>Closed Source!</h3></center></a>
+   			</div>
+   		</div>
+   	</div>
+
+   	<br>
+
+   	<center>
+	   	<a href="mailto:n-ziermann@protonmail.com" class="mail" target="_blank" rel="noopener noreferrer">
+			Email Me!
+		</a>
+	</center>
+
+	<br>
+
+   	<!-- Footer -->
+   	<div class="row">
+   		<div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 primary-color">	
+   			<p>Niklas Ziermann Copyright © 2019</p>
+   		</div>
+   		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 primary-color">	
+   			<a href="#" id="topArrow"></a>
+   		</div>
+   	</div>
+
+   
+
+
+   	<script type="text/javascript">   
+      //instantiate game
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/blind.json", {onProgress: UnityProgress});
+      // check if url contains language settings
+      switch(document.URL.split("?")[1]){
+        case "de":
+          localStorage.setItem("lang", "de")
+          break
+        case "en":
+          localStorage.setItem("lang", "en")
+          break
+      }
+      // check settings if site needs to be translated
+      switch(localStorage.getItem("lang")){
+        case null:
+          localStorage.setItem("lang", "en")
+          break
+        default:
+          translate(localStorage.getItem("lang"))
+          break
+      }
+    </script>
+</body>
+</html>

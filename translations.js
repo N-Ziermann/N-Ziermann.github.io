@@ -48,6 +48,11 @@ var translations = {	//object that contains all translations
 		"pi-deck-config" : "The configuration page is based on <i>django</i> and stores the pi-deck's commands inside a <i>sqlite3 database</i>.<br>This database then gets accessed through the <i>PyQt5</i> based GUI program.",
 		"pi-deck-usage" : "When now pressing one of the twelfe Buttons in the GUI, the command associated with it will be send to the PC that's meant to be controlled with the pi-deck.<br>This PC wil then interpret the command and do one of four things:<br><br><ul><li>Open a program or file</li><li>Open a webpage</li><li>Type a string</li><li>Press a certain key combination</li></ul></h5>",
 
+		//projects/love_potion.html - texts:
+		"love-potion-one" : "Love Potion is a jump and run made in a group of 4 people within a week.",
+		"love-potion-two" : "It was made for the second Brackey's Game Jam and scored 23. place out of 325 entries.",
+		"love-potion-three" : "I was the main coder and only got assistance near the end to do some final bugfixing.",
+
 	},
 
 	"de" : {
@@ -96,6 +101,11 @@ var translations = {	//object that contains all translations
 		"pi-deck-config" : "Die Webkonfiguration basieret auf <i>Django</i> und speichert die Kommandos des Pi-Deck in einer <i>sqlite3 Datenbank</i>.<br>Diese Datenbank kann daraufhin das, auf <i>PyQt5</i> basierende, GUI nutzen.",
 		"pi-deck-usage" : "Wird nun einer der zwölf GUI-Knöpfe gedrückt, wir das damit verbundende Kommando an den, mit dem Pi-Deck verbundenden, Computer gesendet.<br>Dieser Computer interpretiert dieses Kommando daraufhin um eines von vier Dingen zu tun:<br><br><ul><li>Ein/e Programm/Datei öffnen</li><li>Eine Website öffnen</li><li>Einen Text tippen</li><li>Eine Tastenkombination drücken</li></ul></h5>",
 
+		//projects/love_potion.html - texts:
+		"love-potion-one" : "Love Potion ist ein Jump and Run welches von vier Personen innerhalb einer Woche erstellt wurde.",
+		"love-potion-two" : "Es wurde zur Teilnahme am zweiten Brackey's Game Jam erstellt und erreichte den 23. Platz bei insgesammt 325 Einsendungen.",
+		"love-potion-three" : "Ich hatte die Rolle des Programmierers und bekam nur am Ende Unterstützung beim Bugfixing.",
+		
 	}
 }
 
