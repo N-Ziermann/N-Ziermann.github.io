@@ -39,6 +39,12 @@ a:hover{
 	width: 80%;
 }
 
+#game{
+	width:100%; 
+	border: 0;
+	margin-bottom: 20px;
+}
+
 [class*=row]{
 	margin: 0;
 }

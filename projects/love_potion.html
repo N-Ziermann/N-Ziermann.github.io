@@ -30,7 +30,7 @@
    		
       <div class="row">
    			<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-            <iframe id="game" src="https://i.simmer.io/@Salkiniklas/~d30ed4bf-b03e-e7c1-f3ab-1e66c9fecdd6" style="width:100%; border:0;"></iframe>
+            <iframe id="game" src="https://i.simmer.io/@Salkiniklas/~a53ac414-c3eb-21cf-9885-37babd9eeb4f"></iframe>
    			</div>
 
    			<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
@@ -88,7 +88,7 @@
       addEvent(window, "resize", resizeGame);
       function resizeGame(){
         var game = document.getElementById("game");
-        game.style.height = (game.clientWidth / 16 * 9) + "px";
+        game.style.height = (game.clientWidth / 16 * 9 - 1) + "px";
       }
       // check if url contains language settings
       switch(document.URL.split("?")[1]){
