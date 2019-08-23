@@ -28,8 +28,8 @@ var translations = {	//object that contains all translations
 		"Ai1-header" : "Placeholder",
 		"Ai1-text" : "Lorem ipsum-eng",
 
-		"game1-header" : "Placeholder",
-		"game1-text" : "Lorem ipsum-eng",
+		"game1-header" : "Love Potion",
+		"game1-text" : "Love Potion is a jump and run made in a group of 4 people within a week using the Unity game engine.",
 
 		"software1-header" : "Pi-Deck",
 		"software1-text" : "A raspberry-pi based macro tool inspired by the elgato stream deck that can be used wirelessly and is configured through the webbrowser.<br><br>Made with Python",
@@ -81,8 +81,8 @@ var translations = {	//object that contains all translations
 		"Ai1-header" : "Platzhalter",
 		"Ai1-text" : "Lorem ipsum-de",
 		
-		"game1-header" : "Platzhalter",
-		"game1-text" : "Lorem ipsum-de",
+		"game1-header" : "Love Potion",
+		"game1-text" : "Love Potion ist ein Jump and Run welches, mit der Unity-Game-Engine, von vier Personen innerhalb einer Woche erstellt wurde.",
 		
 		"software1-header" : "Pi-Deck",
 		"software1-text" : "Ein auf dem Raspberry-pi basierender Macro-Kontroller, welcher vom Elgato-Stream-Deck inspiriert ist und, durch die Nutzung einer Webkonfiguration, sogar kabellos funktioniert.<br><br>Geschrieben in Python",
