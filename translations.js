@@ -11,7 +11,7 @@ var translations = {	//object that contains all translations
 
 		// index.html-texts:
 		"whatAmI" : "I'm a Software Engineer",
-		"experience" : "Experienced in Python and JavaScript",
+		"experience" : "Experienced in Linux, Python and JavaScript",
 		"whatIdo" : "Working on AI, Games, IoT and Networking",
 		"tools" : "Tools I use: Unity3D, Tensorflow.js and Django",
 		"AI-header": "Artificial Intelligence",
@@ -64,7 +64,7 @@ var translations = {	//object that contains all translations
 
 		// index.html-texts:
 		"whatAmI" : "Ich bin Software-Ingenieur",
-		"experience" : "Ich schreibe primär in Python und JavaScript",
+		"experience" : "Ich schreibe primär in Python und JavaScript und nutze Linux sowie Windows",
 		"whatIdo" : "Ich arbeite an IoT, Netzwerkskripts, KI und Spielen",
 		"tools" : "Ich nutze Tensorflow.js, Django und Unity3D",
 		"AI-header": "Künstliche Intelligenz",
