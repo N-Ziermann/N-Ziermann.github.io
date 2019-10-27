@@ -33,14 +33,14 @@ var translations = {	//object that contains all translations
 
 		"software1-header" : "Pi-Deck",
 		"software1-text" : "A raspberry-pi based macro tool inspired by the elgato stream deck that can be used wirelessly and is configured through the webbrowser.<br><br>Made with Python",
-		
+
 		"software2-header" : "Placeholder",
 		"software2-text" : "Lorem ipsum-eng",
 
 
 		// contact.html-texts:
 		"touch" : "Get in touch",
-		"phone" : "Phone: 1 - 555 555 5555",
+		"phone" : "Phone: 01575 4639530",
 
 
 		//projects/pi-deck.html - texts:
@@ -80,20 +80,20 @@ var translations = {	//object that contains all translations
 		// projects.html-texts:
 		"Ai1-header" : "Platzhalter",
 		"Ai1-text" : "Lorem ipsum-de",
-		
+
 		"game1-header" : "Love Potion",
 		"game1-text" : "Love Potion ist ein Jump and Run welches, mit der Unity-Game-Engine, von vier Personen innerhalb einer Woche erstellt wurde.",
-		
+
 		"software1-header" : "Pi-Deck",
 		"software1-text" : "Ein auf dem Raspberry-pi basierender Macro-Kontroller, welcher vom Elgato-Stream-Deck inspiriert ist und, durch die Nutzung einer Webkonfiguration, sogar kabellos funktioniert.<br><br>Geschrieben in Python",
-		
+
 		"software2-header" : "Platzhalter",
 		"software2-text" : "Lorem ipsum-de",
 
 
 		// contact.html-texts:
 		"touch" : "Mich kontaktieren",
-		"phone" : "Tel. : 1 - 555 555 5555",
+		"phone" : "Tel. : 01575 4639530",
 
 
 		//projects/pi-deck.html - texts:
@@ -105,7 +105,7 @@ var translations = {	//object that contains all translations
 		"love-potion-one" : "Love Potion ist ein Jump and Run welches von vier Personen innerhalb einer Woche erstellt wurde.",
 		"love-potion-two" : "Es wurde zur Teilnahme am zweiten Brackey's Game Jam erstellt und erreichte den 23. Platz bei insgesammt 325 Einsendungen.",
 		"love-potion-three" : "Ich hatte die Rolle des Programmierers und bekam nur am Ende Unterstützung beim Bugfixing.",
-		
+
 	}
 }
 
@@ -124,4 +124,3 @@ function setLanguage(language){
 	localStorage.setItem("lang", language)
 	translate(language)
 }
-
