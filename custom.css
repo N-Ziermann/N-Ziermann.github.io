@@ -45,6 +45,22 @@ a:hover{
 	margin-bottom: 20px;
 }
 
+#codeArea{
+	height: 100%;
+	width: 100%;
+	background-color: var(--tertiary-color);
+	color: white;
+	resize: none;
+}
+
+#output{
+	height: 100%;
+	width: 100%;
+	background-color: var(--secondary-color);
+	color: white;
+	resize: none;
+}
+
 [class*=row]{
 	margin: 0;
 }
@@ -129,6 +145,10 @@ a:hover{
 	border-color: var(--tertiary-color);
 }
 
+[class*=summary]{
+	padding-bottom: 10px;
+}
+
 [class*=weblink]{
 	background-color: var(--tertiary-color);
 	border:	solid;
@@ -171,6 +191,28 @@ a:hover{
 
 [class*=selectionImage]:hover{
 	cursor: pointer;
+}
+
+[class*=run]{
+	padding: 0 10px 0 10px;
+}
+
+[class*=button]{
+	background-color: var(--primary-color);
+	border:solid;
+	border-width: 5px;
+	border-color: var(--secondary-color);
+	color: white;
+	padding: 7px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+[class*=button]:hover{
+	background-color: var(--secondary-color);
+	border-color: var(--primary-color);
+	color: white;
+	text-decoration: none;
 }
 
 @media (min-width: 1600px) {
