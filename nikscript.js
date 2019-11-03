@@ -16,8 +16,8 @@ function lexer(code){
             tokens.push([c,""])
         }
 	    
-	else if (c == "#"){ //comments
-            while (c != "\n"){
+		else if (c == "#"){ //comments
+            while (c != "\n" && index<code.length-1){
             	index +=1
             	c = code[index]
             }
