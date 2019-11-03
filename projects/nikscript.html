@@ -42,10 +42,10 @@
    		<br>
 
    		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 row">
-   			<button onclick="run()" 	class="run button">Run</button>
-   			<button onclick="fizz()" 	class="fill button">FizzBuzz</button>
-   			<button onclick="rec()" 	class="fill button">Recursion</button>
-   			<button onclick="mathOp()" 	class="fill button">Math Operations</button>
+   			<button onclick="run()" 	class="run button" id="run-button">Run</button>
+   			<button onclick="fizz()" 	class="fill button" id="fizz-button">FizzBuzz</button>
+   			<button onclick="rec()" 	class="fill button" id="recursion-button">Recursion</button>
+   			<button onclick="mathOp()" 	class="fill button" id="math-button">Math Operations</button>
    		</div>
 
    		<br>
@@ -67,17 +67,17 @@
 
    			</h5>
    			--->
-   			<h5>Nikscript is a programming language I wrote using JavaScript. </h5>
-   			<h5>It's inspired by JavaScript (variables) and Python (# for comments) but also has some language specific syntax like its for loops: for (i = lowerLimit < upperLimit).</h5>
-   			<h5>Its featureset includes:</h5>
+   			<h5 id="nikscript-intro">Nikscript is a programming language written in JavaScript. </h5>
+   			<h5 id="nikscript-inspiration">It's inspired by JavaScript (variables) and Python (# for comments) but also has some language specific syntax like its for loops: for (i = lowerLimit < upperLimit).</h5>
+   			<h5 id="nikscript-features">Its featureset includes:</h5>
    			<h5>
    				<ul>
-	         		<li>Variables (floats and strings)</li>
-	     			<li>for and while loops</li>
-	     			<li>Buildin functions (print and len)</li>
-	     			<li>Function definitions</li>
-	     			<li>Recursion</li>
-	       		</ul>
+	         	<li id="nikscript-feature-1">Variables (floats and strings)</li>
+	     			<li id="nikscript-feature-2">for and while loops</li>
+	     			<li id="nikscript-feature-3">Buildin functions (print and len)</li>
+	     			<li id="nikscript-feature-4">Function definitions</li>
+	     			<li id="nikscript-feature-5">Recursion</li>
+	       	</ul>
    			</h5>
    			<br>
    			<a href="https://github.com/N-Ziermann/pi-deck" target="_blank" rel="noopener noreferrer"><center><h3 class="weblink">Github</h3></center></a>
@@ -134,7 +134,7 @@
       }
 
       function fizz(){
-      	codeArea.value = "for(i=0<31){\n tmp = \"\";\n if (n%3 == 0){\n   tmp = tmp + \"Fizz\";\n }\n if (n%5 == 0){\n   tmp = tmp + \"Buzz\";\n }\n if (tmp == \"\"){\n   tmp = i;\n }\n print(tmp);\n}";
+      	codeArea.value = "for(i=0<31){\n tmp = \"\";\n if (i%3 == 0){\n   tmp = tmp + \"Fizz\";\n }\n if (i%5 == 0){\n   tmp = tmp + \"Buzz\";\n }\n if (tmp == \"\"){\n   tmp = i;\n }\n print(tmp);\n}";
       }
 
       function rec(){

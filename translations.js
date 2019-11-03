@@ -53,6 +53,20 @@ var translations = {	//object that contains all translations
 		"love-potion-two" : "It was made for the second Brackey's Game Jam and scored 23. place out of 325 entries.",
 		"love-potion-three" : "I was the main coder and only got assistance near the end to do some final bugfixing.",
 
+		//projects/nikscript.html - texts:
+		"run-button" : "Run",
+		"fizz-button" : "FizzBuzz",
+		"recursion-button" : "Recursion",
+		"math-button" : "Math Operations",
+		"nikscript-intro" : "Nikscript is a programming language written in JavaScript.",
+		"nikscript-inspiration" : "It's inspired by JavaScript (variables) and Python (# for comments) but also has some language specific syntax like its for loops: for (i = lowerLimit < upperLimit).",
+		"nikscript-features" : "Its featureset includes:",
+		"nikscript-feature-1" : "Variables (floats and strings)",
+		"nikscript-feature-2" : "for and while loops",
+		"nikscript-feature-3" : "Buildin functions (print and len)",
+		"nikscript-feature-4" : "Function definitions",
+		"nikscript-feature-5" : "Recursion",
+
 	},
 
 	"de" : {
@@ -105,6 +119,22 @@ var translations = {	//object that contains all translations
 		"love-potion-one" : "Love Potion ist ein Jump and Run welches von vier Personen innerhalb einer Woche erstellt wurde.",
 		"love-potion-two" : "Es wurde zur Teilnahme am zweiten Brackey's Game Jam erstellt und erreichte den 23. Platz bei insgesammt 325 Einsendungen.",
 		"love-potion-three" : "Ich hatte die Rolle des Programmierers und bekam nur am Ende Unterstützung beim Bugfixing.",
+
+		//projects/nikscript.html - texts:
+		"run-button" : "Ausführen",
+		"fizz-button" : "FizzBuzz",
+		"recursion-button" : "Rekursion",
+		"math-button" : "Mathematische Operationen",
+		
+		"nikscript-intro" : "Nikscript ist eine in JavaScript geschriebene Programmiersprache.",
+		"nikscript-inspiration" : "Sie ist von JavaScript (Variablen) und Python (# für Kommentare) inspiriert, enthällt jedoch auch eigenen Syntax, welcher zum Beispiel bei for-Schleifen zu sehen ist: for (i = Minimum < Maximum).",
+		"nikscript-features" : "Nikscript unterstützt:",
+
+		"nikscript-feature-1" : "Variablen (Floats und Strings)",
+		"nikscript-feature-2" : "for und while Schleifen",
+		"nikscript-feature-3" : "Eingebaute Funktionen (print und len)",
+		"nikscript-feature-4" : "Funktionsdefinitionen",
+		"nikscript-feature-5" : "Rekursion",
 
 	}
 }
