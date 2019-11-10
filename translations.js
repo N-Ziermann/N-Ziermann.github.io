@@ -14,8 +14,8 @@ var translations = {	//object that contains all translations
 		"experience" : "Experienced in Linux, Python and JavaScript",
 		"whatIdo" : "Working on AI, Games, IoT and Networking",
 		"tools" : "Tools I use: Unity3D, Tensorflow.js and Django",
-		"AI-header": "Artificial Intelligence",
-		"AI-text": "My projects for solving mashine learning problems in Python and JavaScripts using Tensorflow.",
+		"web-header": "Web Development",
+		"web-text": "Full Stack Web Development Projects.",
 		"game-header": "Game Development",
 		"game-text": "Game Development Projects ranging from Game-Jam-Submissions to Fantasy-Console-Games.",
 		"software-header": "Software Development",
@@ -25,8 +25,8 @@ var translations = {	//object that contains all translations
 
 
 		// projects.html-texts:
-		"Ai1-header" : "Placeholder",
-		"Ai1-text" : "Lorem ipsum-eng",
+		"web1-header" : "Password Manager",
+		"web1-text" : "A password manager website written in Django that uses a combination of hashing(PBKDF2) and encryption(AES) to insure the secure transmission of data. ",
 
 		"game1-header" : "Love Potion",
 		"game1-text" : "Love Potion is a jump and run made in a group of 4 people within a week using the Unity game engine.",
@@ -81,8 +81,8 @@ var translations = {	//object that contains all translations
 		"experience" : "Ich schreibe primär in Python und JavaScript und nutze Linux sowie Windows",
 		"whatIdo" : "Ich arbeite an IoT, Netzwerkskripts, KI und Spielen",
 		"tools" : "Ich nutze Tensorflow.js, Django und Unity3D",
-		"AI-header": "Künstliche Intelligenz",
-		"AI-text": "Meine Projekte zur Lösung von Mashine-Learning-Problemen, welche in Python und JavaScript mit Hilfe von Tensorflow geschrieben sind.",
+		"web-header": "Webentwicklung",
+		"web-text": "Full-Stack-Webentwicklungs Projekte.",
 		"game-header": "Spieleentwicklung",
 		"game-text": "Spieleentwicklungsprojekte wie Fantasy-Console-Spiele oder die Teilnahme an Game-Jams.",
 		"software-header": "Softwareentwicklung",
@@ -92,8 +92,8 @@ var translations = {	//object that contains all translations
 
 
 		// projects.html-texts:
-		"Ai1-header" : "Platzhalter",
-		"Ai1-text" : "Lorem ipsum-de",
+		"web1-header" : "Passwort Manager",
+		"web1-text" : "Eine Passwort-Manager Seite welche in Django geschrieben ist und eine Kombination aus Hashing(PBKDF2)- und Verschlüsselungsalgorithmen(AES) zur sicheren Datenübertragung nutzt.",
 
 		"game1-header" : "Love Potion",
 		"game1-text" : "Love Potion ist ein Jump and Run welches, mit der Unity-Game-Engine, von vier Personen innerhalb einer Woche erstellt wurde.",

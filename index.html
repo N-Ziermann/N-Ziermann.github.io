@@ -50,19 +50,11 @@
    		<div class="row">	<!-- My Projects -->
    			<div class="col-md-12 primary-color">
    				<div class="row">
-   					<a class="col-lg-4 col-md-12 col-sm-12 col-xs-12 click skill centerText primary-border" href="projects.html#AI">
-   						<h2 id="AI-header">Artificial Intelligence</h2>
-   						<img src="media/AI.png">
-   						<p id="AI-text">
-   							My Projects for solving Mashine Learning problems in Python and JavaScripts using Tensorflow.
-   						</p>
-   					</a>
-
-   					<a class="col-lg-4 col-md-12 col-sm-12 col-xs-12 click skill centerText primary-border" href="projects.html#Game">
-   						<h2 id="game-header">Game Development</h2>
-   						<img src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.decane.net%2Fwp-content%2Fuploads%2F2011%2F05%2FUnity-logo.png&f=1">
-   						<p id="game-text">
-   							Game Development Projects ranging from Game-Jam-Submissions to Fantasy-Console-Games.
+   					<a class="col-lg-4 col-md-12 col-sm-12 col-xs-12 click skill centerText primary-border" href="projects.html#web">
+   						<h2 id="web-header">Web Development</h2>
+   						<img src="media/web.png">
+   						<p id="web-text">
+   							Full Stack Web Development Projects.
    						</p>
    					</a>
 
@@ -73,6 +65,14 @@
    							Software Development Projects like Internet of Things Devices or Full-Stack-Webdevelopment.
    						</p>
    					</a>
+            
+            <a class="col-lg-4 col-md-12 col-sm-12 col-xs-12 click skill centerText primary-border" href="projects.html#Game">
+              <h2 id="game-header">Game Development</h2>
+              <img src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.decane.net%2Fwp-content%2Fuploads%2F2011%2F05%2FUnity-logo.png&f=1">
+              <p id="game-text">
+                Game Development Projects ranging from Game-Jam-Submissions to Fantasy-Console-Games.
+              </p>
+            </a>
    				</div>
    			</div>
    		</div>
@@ -131,7 +131,7 @@
       // check settings if site needs to be translated
       switch(localStorage.getItem("lang")){
         case null:
-          localStorage.setItem("lang", "en")
+          localStorage.setItem("lang", "de")
           break
         default:
           translate(localStorage.getItem("lang"))
