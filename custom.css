@@ -154,7 +154,7 @@ a:hover{
 	border:	solid;
 	border-color: var(--tertiary-color);
 	padding: 0 4px 0 4px;
-	margin-left: 6px;
+	margin-right: 6px;
 }
 
 [class*=weblink]:hover{
