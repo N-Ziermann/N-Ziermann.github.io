@@ -22,6 +22,10 @@ a:hover{
 	text-decoration: none;
 }
 
+p{
+	font-size: 18px;
+}
+
 #topArrow{
 	border: solid white;
   	border-width: 0 6px 6px 0;
