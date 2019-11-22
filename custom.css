@@ -76,13 +76,14 @@ p{
 	border-right-color: var(--primary-color);
 }
 
+[class*=meImg]{
+	border-radius: 15px;
+	width: 48%;
+}
+
 [class*=nav]:hover{
 	color: white;
 	text-decoration: underline;
-}
-
-[class*=profile]{
-	width: 50%;
 }
 
 [class*=primary-color]{
