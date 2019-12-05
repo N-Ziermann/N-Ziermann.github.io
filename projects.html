@@ -20,7 +20,7 @@
          <a class="nav" href="contact.html"><h4 id="contact">Contact</h4></a>
          <a class="nav" href="https://github.com/N-Ziermann" target="_blank" rel="noopener noreferrer"><h4>GitHub</h4></a>
       </div>
-   </div>   
+   </div>
 
    	<br>
 
@@ -40,10 +40,10 @@
 	   					</div>
 	   					<br>
    						<p id="web1-text">
-   							A password manager website written in Django that uses a combination of hashing and encryption to insure the secure transmission of data. 
+   							A password manager website written in Django that uses a combination of hashing and encryption to insure the secure transmission of data.
    						</p>
 
-   						
+
    					</div>
    					<div class="col-lg-4">
    						<center><a href="https://niklasziermann.pythonanywhere.com/password"><img src="media/lock.png"></a></center>
@@ -67,7 +67,7 @@
    						</div>
    						<br>
    						<p id="software1-text">
-   							A raspberry-pi based macro tool inspired by the elgato stream deck that can be used wirelessly and is configured through the webbrowser. 
+   							A raspberry-pi based macro tool inspired by the elgato stream deck that can be used wirelessly and is configured through the webbrowser.
 
    						</p>
    					</div>
@@ -143,15 +143,15 @@
 
    	<!-- Footer -->
    	<div class="row">
-   		<div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 primary-color">	
+   		<div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 primary-color">
    			<p>Niklas Ziermann Copyright © 2019</p>
    		</div>
-   		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 primary-color">	
+   		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 primary-color">
    			<a href="#" id="topArrow"></a>
    		</div>
    	</div>
 
-      <script type="text/javascript">   
+      <script type="text/javascript">
          // check if url contains language settings
          switch(document.URL.split("?")[1]){
            case "de":
@@ -165,6 +165,7 @@
          switch(localStorage.getItem("lang")){
            case null:
              localStorage.setItem("lang", "de")
+             translate(localStorage.getItem("lang"))
              break
            default:
              translate(localStorage.getItem("lang"))

@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="custom.css">
     <script src="translations.js"></script>
   </head>
-  
+
   <body>
 
   	<!-- Header -->
@@ -23,7 +23,7 @@
             <a class="nav" href="https://www.linkedin.com/in/niklas-ziermann/" target="_blank" rel="noopener noreferrer"><h4>Linkedin</h4></a>
          </div>
    	</div>
-    	
+
    	<br>
    	<!-- Body -->
    	<div class="container">
@@ -44,7 +44,7 @@
    					</div>
    				</div>
    			</div>
-   		</div>	
+   		</div>
 
    		<br>
 
@@ -66,7 +66,7 @@
    							Software Development Projects like Internet of Things Devices or Full-Stack-Webdevelopment.
    						</p>
    					</a>
-            
+
             <a class="col-lg-4 col-md-12 col-sm-12 col-xs-12 click skill centerText primary-border" href="projects.html#Game">
               <h2 id="game-header">Game Development</h2>
               <img src="media/unity.png">
@@ -92,7 +92,7 @@
    					<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 primary-border">
    						<center><img src="media/JS-Cert.png"></center>
    					</div>
-   					
+
    				</div>
    			</a>
    		</div>
@@ -110,16 +110,16 @@
 
    	<!-- Footer -->
    	<div class="row">
-   		<div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 primary-color">	
+   		<div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 primary-color">
    			<p>Niklas Ziermann Copyright © 2019</p>
    		</div>
-   		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 primary-color">	
+   		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 primary-color">
    			<a href="#" id="topArrow"></a>
    		</div>
    	</div>
 
-    
-    <script type="text/javascript">   
+
+    <script type="text/javascript">
       // check if url contains language settings
       switch(document.URL.split("?")[1]){
         case "de":
@@ -133,6 +133,7 @@
       switch(localStorage.getItem("lang")){
         case null:
           localStorage.setItem("lang", "de")
+          translate(localStorage.getItem("lang"))
           break
         default:
           translate(localStorage.getItem("lang"))

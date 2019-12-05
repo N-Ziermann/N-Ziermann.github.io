@@ -8,7 +8,7 @@
     <script src="../translations.js"></script>
     <script src="../nikscript.js"></script>
   </head>
-  
+
   <body>
 
   	<!-- Header -->
@@ -28,7 +28,7 @@
 
    	<div class="container primary-color">
       	<center class="primary-border"><h2><b>Nikscript</b></h2></center>
-   		
+
    		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 row " style="height:500px;">
    			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:0;">
    				<textarea name="codeArea" id="codeArea"># code</textarea>
@@ -81,18 +81,18 @@
 
    	<!-- Footer -->
    	<div class="row">
-   		<div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 primary-color">	
+   		<div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 primary-color">
    			<p>Niklas Ziermann Copyright © 2019</p>
    		</div>
-   		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 primary-color">	
+   		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 primary-color">
    			<a href="#" id="topArrow"></a>
    		</div>
    	</div>
 
 
-   	
 
-   	<script type="text/javascript"> 
+
+   	<script type="text/javascript">
 
       // check if url contains language settings
       switch(document.URL.split("?")[1]){
@@ -107,6 +107,7 @@
       switch(localStorage.getItem("lang")){
         case null:
           localStorage.setItem("lang", "de")
+          translate(localStorage.getItem("lang"))
           break
         default:
           translate(localStorage.getItem("lang"))

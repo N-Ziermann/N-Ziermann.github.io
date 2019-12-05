@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../custom.css">
     <script src="../translations.js"></script>
   </head>
-  
+
   <body>
 
   	<!-- Header -->
@@ -30,7 +30,7 @@
    		<div class="row">
    			<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
 
-           
+
             <center>
 
    						<video muted autoplay width="90%" controls src="../media/Pideck.mp4"></video>
@@ -73,18 +73,18 @@
 
    	<!-- Footer -->
    	<div class="row">
-   		<div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 primary-color">	
+   		<div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 primary-color">
    			<p>Niklas Ziermann Copyright © 2019</p>
    		</div>
-   		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 primary-color">	
+   		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 primary-color">
    			<a href="#" id="topArrow"></a>
    		</div>
    	</div>
 
-   
 
 
-   	<script type="text/javascript">   
+
+   	<script type="text/javascript">
       // check if url contains language settings
       switch(document.URL.split("?")[1]){
         case "de":
@@ -98,6 +98,7 @@
       switch(localStorage.getItem("lang")){
         case null:
           localStorage.setItem("lang", "de")
+          translate(localStorage.getItem("lang"))
           break
         default:
           translate(localStorage.getItem("lang"))

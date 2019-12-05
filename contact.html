@@ -46,6 +46,7 @@
     switch(localStorage.getItem("lang")){
       case null:
         localStorage.setItem("lang", "de")
+        translate(localStorage.getItem("lang"))
         break
       default:
         translate(localStorage.getItem("lang"))
