@@ -13,7 +13,7 @@ var translations = {	//object that contains all translations
 		"whatAmI" : "I'm a Software Engineer",
 		"experience" : "Experienced in Linux, Python and JavaScript",
 		"whatIdo" : "Working on AI, Games, IoT and Networking",
-		"tools" : "Tools I use: Unity3D, Tensorflow.js and Django",
+		"tools" : "Tools I use: Django, Bootstrap and Unity3D",
 		"web-header": "Web Development",
 		"web-text": "Full Stack Web Development Projects.",
 		"game-header": "Game Development",
@@ -80,7 +80,7 @@ var translations = {	//object that contains all translations
 		"whatAmI" : "Ich bin Software-Ingenieur",
 		"experience" : "Ich schreibe primär in Python und JavaScript und nutze Linux sowie Windows",
 		"whatIdo" : "Ich arbeite an IoT, Netzwerkskripts, KI und Spielen",
-		"tools" : "Ich nutze Tensorflow.js, Django und Unity3D",
+		"tools" : "Ich nutze unter anderem Django, Bootstrap und Unity3D",
 		"web-header": "Webentwicklung",
 		"web-text": "Full-Stack-Webentwicklungs Projekte.",
 		"game-header": "Spieleentwicklung",
@@ -125,7 +125,7 @@ var translations = {	//object that contains all translations
 		"fizz-button" : "FizzBuzz",
 		"recursion-button" : "Rekursion",
 		"math-button" : "Mathematische Operationen",
-		
+
 		"nikscript-intro" : "Nikscript ist eine in JavaScript geschriebene Programmiersprache.",
 		"nikscript-inspiration" : "Sie ist von JavaScript (Variablen) und Python (# für Kommentare) inspiriert, enthällt jedoch auch eigenen Syntax, welcher zum Beispiel bei for-Schleifen zu sehen ist: for (i = Minimum < Maximum).",
 		"nikscript-features" : "Nikscript unterstützt:",
