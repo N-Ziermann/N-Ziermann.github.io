@@ -3,19 +3,19 @@ function lexer(code){
     index = -1
 
     var lastTokenized = " "; // stores last accepted tokenvalue in case something (negative numbers) depend on it
-    
+
     while (index<code.length-1){
         index +=1
         c = code[index]
-		
-        if (c == " " || c == "\n"){    
+
+        if (c == " " || c == "\n"){
             continue
         }
-        
-        else if (c == ";"){ 
+
+        else if (c == ";"){
             tokens.push([c,""])
         }
-	    
+
 		else if (c == "#"){ //comments
             while (c != "\n" && index<code.length-1){
             	index +=1
@@ -27,7 +27,7 @@ function lexer(code){
             n = c
             index +=1
             c = code[index]
-		
+
             while (c.match(/[0-9\.]/)){
                 n += c
                 index +=1
@@ -37,46 +37,46 @@ function lexer(code){
             index -= 1 //prevent loosing data
             lastTokenized = code[index]
         }
-        
+
         else if (c == "+" || c== "-" || c == "/" || c=="*"|| c=="%"){
             tokens.push(["operator",c])
             lastTokenized = c
         }
-            
+
         else if (c == "\""){
-		
-	
+
+
             s = ""
             index +=1
             c = code[index]
-		
+
             while (c != "\""){
                 s += c
                 index +=1
                 c = code[index]
-		
+
             }
 
             tokens.push(["string",s])
             lastTokenized = "string"
-        }	
-        
+        }
+
         else if(c.match(/[\<\>\(\)\{\}\[\],=]/)) {
 
             tokens.push([c,""])
             lastTokenized = c
         }
-        
+
         if (c.match(/[a-zA-Z]/)){
             term = c
             index +=1
             c = code[index]
-		
+
             while (c.match(/[a-zA-Z0-9_]/)){
                 term += c
                 index +=1
                 c = code[index]
-		
+
             }
 
             if (term=="if"||term=="else"||term=="for"||term=="while"){
@@ -89,11 +89,11 @@ function lexer(code){
             lastTokenized = "name"
         }
 
-	
+
     }
     tokens.push(["END","END"])
     return tokens
-	
+
 }
 
 function parser(tokens,index,type,returnsymbol){
@@ -109,19 +109,19 @@ function parser(tokens,index,type,returnsymbol){
     	else if (type == "operation" && (token[0] == ")" || token[0] == "="|| token[0] == "<"|| token[0] == ">"|| token[0] == ",")){	//special case because multiple things end operations
     		break
     	}
-	
+
 		else if (token[0] == "statement"){
 			var statement_type = token[1]
 			var cond = parser(tokens,index+2,"condition","{")
 			var ifTrue = parser(tokens, cond[1]+1, "ifTrue", "}")
-			index = ifTrue[1] 
+			index = ifTrue[1]
 			var ifFalse = []
 			if (tokens[ifTrue[1]+1][1] == "else"){
 				ifFalse = parser(tokens,ifTrue[1]+2,"ifFalse","}")
 			 	index = ifFalse[1]
 			}
-			result.push(["statement",[statement_type,[["condition",cond[0]], ["ifTrue", ifTrue[0]], ["ifFalse",ifFalse[0]]]]])	
-		} 
+			result.push(["statement",[statement_type,[["condition",cond[0]], ["ifTrue", ifTrue[0]], ["ifFalse",ifFalse[0]]]]])
+		}
 
 
     	else if (tokens[index+1][0] == "operator" && type != "operation"){
@@ -130,28 +130,28 @@ function parser(tokens,index,type,returnsymbol){
     		index = data[1]-1
     	}
 
-    	
-    	else if (token[0] == "operator" && type != "operation"){ // for foo() + value 
+
+    	else if (token[0] == "operator" && type != "operation"){ // for foo() + value
     		var operationStart = [result.pop()]
     		var tmp = operationStart.concat([["operator","+"]])
     		data = parser(tokens,index+1,"operation",";")
     		result.push(["operation", tmp.concat(data[0])])
     		index = data[1]-1
     	}
-		
+
 
     	else if (token[0] == "number" || token[0] == "string" || token[0] == "operator" || token[0]=="="|| token[0]=="<"|| token[0]==">"){
     		result.push(token)
     	}
-    	
+
     	else if(token[0] == "name"){
-    		
+
     		if(token[1] == "var"){
     			data = parser(tokens,index+1,"assignment",";")
     			result.push(["assignment", data[0]])
     			index = data[1]-1
     		}
-    		
+
     		else if (token[1] == "return"){
 				data = parser(tokens,index+1,"assignment",";")
 				result.push(["return", data[0]])
@@ -166,9 +166,9 @@ function parser(tokens,index,type,returnsymbol){
     			index = funcContent[1]
     			result.push(["function", [funcName, [["input", inputVars], ["content", funcContent]] ]])
     		}
-    		
+
     		else if (tokens[index+1][0] == "=" && type != "assignment" && type != "comparison"){
-    			
+
     			if (tokens[index+2][0] == "="){
 					if (type == "condition"){
 						result.push(token)
@@ -189,17 +189,17 @@ function parser(tokens,index,type,returnsymbol){
     		}
 
     		else if (tokens[index+1][0] == "("){
-    			
+
     			data = parser(tokens,index+2,"call",")")
     			result.push(["call", [token[1], data[0]]])
-    			index = data[1] 
+    			index = data[1]
     		}
-		
+
     		else{
     			result.push(token)
     		}
     	}
-    	
+
     	else if (token[0] == "("){
     		data = parser(tokens,index+1,"bracket",")")
     		result.push(["bracket", data[0]])
@@ -211,23 +211,23 @@ function parser(tokens,index,type,returnsymbol){
     }
     return [result, index]
 
-	
+
 }
 
 function interpreter(exprs){
-	
+
 	var index = 0
-	
+
 	while (index < exprs.length){
 
 		var expr = exprs[index]
-		
+
 		if (functionStack.length > 0){
 			if (functionStack[functionStack.length-1][2] != undefined){
 				break
 			}
 		}
-		
+
 		if (expr[0] == "number"){
 			return parseFloat(expr[1])
 		}
@@ -250,18 +250,18 @@ function interpreter(exprs){
 			else
 				functionStack[functionStack.length-1][1][expr[1][0][1]] = c;
 		}
-		
+
 		else if (expr[0] == "call"){
-			
+
 			var content = expr[1]
 
 			if (content[0]+"()" in functions){ // functioncall for selvedefined function
-				
+
 				var functionContent = functions[content[0]+"()"]
 				var argsNeeded = functionContent[0][1][0]
 				var argsGiven = content[1]
 
-				if (argsGiven.length == argsNeeded.length){ 
+				if (argsGiven.length == argsNeeded.length){
 
 					var tempFunctionStack = [] // used so that no values get mixed up in for loop below (values would be taken from newest function in stack)
 
@@ -272,40 +272,40 @@ function interpreter(exprs){
 					}
 
 					functionStack.push(tempFunctionStack[0])
-					
+
 					interpreter(functionContent[1][1][0])
-					
+
 					returnValue = functionStack[functionStack.length-1][2]
-					
+
 					functionStack.pop()
-					
+
 					if (returnValue != undefined)
 						return returnValue
-					
+
 
 
 				}
-				
+
 				else{
 					if(outputObject == undefined)
 						console.log(content[0] + " takes " + argsNeeded.length + " arguments but " + argsGiven.length + " were given!")
-					else 
+					else
 						outputObject.value += content[0] + " takes " + argsNeeded.length + " arguments but " + argsGiven.length + " were given!"
 				}
 			}
-			
+
 			else{ //predefinded function?
-				switch(content[0]){ 
+				switch(content[0]){
 					case "print":
 						if (outputObject == undefined)
 							console.log(interpreter(content[1]))
 						else
 							outputObject.value += interpreter(content[1]) + "\n"
 						break
-					
+
 					case "len":
 						return interpreter(content[1]).length
-					
+
 					default:
 						if(outputObject == undefined)
 							console.log("function \"" + content[0] + "\" undefined")
@@ -316,10 +316,10 @@ function interpreter(exprs){
 		}
 
 		else if(expr[0] == "operation"){
-			
+
 			var content = expr[1]
 			var res = interpreter([content[0]])
-			
+
 			for (var i=1;i<content.length;i+=2){
 
 				switch(content[i][1]){
@@ -344,15 +344,15 @@ function interpreter(exprs){
 		}
 
 		else if(expr[0] == "statement"){
-			
+
 			switch(expr[1][0]){
-				
+
 				case "if":
-					
+
 					if (interpreter([expr[1][1][0]])){ 	// condition
 						interpreter(expr[1][1][1][1]) 	// ifTrue
 					}
-					
+
 					else{
 						if (expr[1][1][2][1] != undefined){
 							interpreter(expr[1][1][2][1])	// ifFalse
@@ -389,12 +389,12 @@ function interpreter(exprs){
 
 					else if (condition[1][0] == ">"){
 						if(functionStack.length == 0){ // not inside a function
-							for (vars[loopVarExpr[1]]=startValue; vars[loopVarExpr[1]] > limit; vars[loopVarExpr[1]]++){
+							for (vars[loopVarExpr[1]]=startValue; vars[loopVarExpr[1]] > limit; vars[loopVarExpr[1]]--){
 								interpreter(loopCode)
 							}
 						}
 						else{
-							for (functionStack[functionStack.length-1][1][loopVarExpr[1]]=startValue; functionStack[functionStack.length-1][1][loopVarExpr[1]] > limit; functionStack[functionStack.length-1][1][loopVarExpr[1]]++){
+							for (functionStack[functionStack.length-1][1][loopVarExpr[1]]=startValue; functionStack[functionStack.length-1][1][loopVarExpr[1]] > limit; functionStack[functionStack.length-1][1][loopVarExpr[1]]--){
 								interpreter(loopCode)
 							}
 						}
@@ -403,13 +403,13 @@ function interpreter(exprs){
 		}
 
 		else if(expr[0] == "condition" || expr[0] == "comparison"){
-			
+
 			var content = expr[1]
 			switch(content[1][0]){ // type of comparison
 				case "=":
 
 					if (interpreter([content[0]]) == interpreter([content[3]])){
-						
+
 						return true
 					}
 
@@ -445,10 +445,10 @@ function interpreter(exprs){
 			var content = expr[1]
 			var functionname = content[0] + "()"
 			var functiondata = content[1]
-			
+
 			functions[functionname] = functiondata
 		}
-		
+
 		else if (expr[0] == "return"){
 			functionStack[functionStack.length-1][2] = interpreter(expr[1])
 			break
