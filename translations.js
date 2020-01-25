@@ -41,6 +41,7 @@ var translations = {	//object that contains all translations
 		// contact.html-texts:
 		"touch" : "Get in touch",
 		"phone" : "Phone: 01575 4639530",
+		"contactNote" : "This contact page also serves as the contact page for: <br><b>GitHub:</b> github.com/N-Ziermann<br><b>linked projects</b>: niklasziermann.pythonanywhere.com/password</p>",
 
 
 		//projects/pi-deck.html - texts:
@@ -108,6 +109,7 @@ var translations = {	//object that contains all translations
 		// contact.html-texts:
 		"touch" : "Mich kontaktieren",
 		"phone" : "Tel. : 01575 4639530",
+		"contactNote" : "Dieses Impressum gilt ebenfalls als Impressum für: <br><b>GitHub:</b> github.com/N-Ziermann<br><b>verlinkte Projekte</b>: niklasziermann.pythonanywhere.com/password</p>",
 
 
 		//projects/pi-deck.html - texts:
