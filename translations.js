@@ -12,8 +12,8 @@ var translations = {	//object that contains all translations
 		// index.html-texts:
 		"whatAmI" : "I'm a Software Engineer",
 		"experience" : "Experienced in Linux, Python and JavaScript",
-		"whatIdo" : "Working on AI, Games, IoT and Networking",
-		"tools" : "Tools I use: Django, Bootstrap and Unity3D",
+		"whatIdo" : "Working on Games, IoT and Networking",
+		"tools" : "Tools I use: Django, Bootstrap, React and Unity3D",
 		"web-header": "Web Development",
 		"web-text": "Full Stack Web Development Projects.",
 		"game-header": "Game Development",
@@ -22,6 +22,8 @@ var translations = {	//object that contains all translations
 		"software-text": "Software Development Projects like Internet of Things Devices or Full-Stack-Webdevelopment.",
 		"cert-header": "Certified in Algorithms and Data Structures",
 		"cert-text": "This certificate from freecodecamp.org represents approximately 300 hours of coursework in the field of Algorithms and Data Structures.",
+		"cert2-header": "Certified in Front End Libraries",
+		"cert2-text": "This certificate from freecodecamp.org represent approximately 300 hours of coursework in the field of Front End Libraries, especially focussing on React and Redux.",
 
 
 		// projects.html-texts:
@@ -80,8 +82,8 @@ var translations = {	//object that contains all translations
 		// index.html-texts:
 		"whatAmI" : "Ich bin Software-Ingenieur",
 		"experience" : "Ich schreibe primär in Python und JavaScript und nutze Linux sowie Windows",
-		"whatIdo" : "Ich arbeite an IoT, Netzwerkskripts, KI und Spielen",
-		"tools" : "Ich nutze unter anderem Django, Bootstrap und Unity3D",
+		"whatIdo" : "Ich arbeite an IoT, Netzwerkskripts und Spielen",
+		"tools" : "Ich nutze unter anderem Django, Bootstrap, React und Unity3D",
 		"web-header": "Webentwicklung",
 		"web-text": "Full-Stack-Webentwicklungs Projekte.",
 		"game-header": "Spieleentwicklung",
@@ -90,7 +92,8 @@ var translations = {	//object that contains all translations
 		"software-text": "Softwareentwicklungsprojekte wie IoT Geräte oder Full-Stack-Webentwicklung.",
 		"cert-header": "Zertifiziert in Algorithmen and Datenstrukturen",
 		"cert-text": "Diese Zertifikat von freecodecamp.org representiert etwa 300 Stunden an Kursarbeit im Feld der Algorithmen und Datenstrukturen.",
-
+		"cert2-header": "Zertifiziert im Feld der Front End Libraries",
+		"cert2-text": "Diese Zertifikat von freecodecamp.org representiert etwa 300 Stunden an Kursarbeit im Feld der Front End Libraries, mit einem Fokus auf React und Redux.",
 
 		// projects.html-texts:
 		"web1-header" : "Passwort Manager",
