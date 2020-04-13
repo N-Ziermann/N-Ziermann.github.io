@@ -91,9 +91,9 @@ var translations = {	//object that contains all translations
 		"software-header": "Softwareentwicklung",
 		"software-text": "Softwareentwicklungsprojekte wie IoT Geräte oder Full-Stack-Webentwicklung.",
 		"cert-header": "Zertifiziert in Algorithmen and Datenstrukturen",
-		"cert-text": "Dieses Zertifikat von freecodecamp.org representiert etwa 300 Stunden an Kursarbeit im Feld der Algorithmen und Datenstrukturen.",
+		"cert-text": "Dieses Zertifikat von freecodecamp.org repräsentiert etwa 300 Stunden an Kursarbeit im Feld der Algorithmen und Datenstrukturen.",
 		"cert2-header": "Zertifiziert im Feld der Front End Libraries",
-		"cert2-text": "Dieses Zertifikat von freecodecamp.org representiert etwa 300 Stunden an Kursarbeit im Feld der Front End Libraries, mit einem Fokus auf React und Redux.",
+		"cert2-text": "Dieses Zertifikat von freecodecamp.org repräsentiert etwa 300 Stunden an Kursarbeit im Feld der Front End Libraries, mit einem Fokus auf React und Redux.",
 
 		// projects.html-texts:
 		"web1-header" : "Passwort Manager",
