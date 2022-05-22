@@ -23,7 +23,8 @@
         cursor: pointer;
 
         canvas {
-            border: solid 2px white;
+            border: solid 2px var(--color-text);
+            background-color: var(--color-secondary);
             aspect-ratio: 10/9;
             width: 100%;
             border-radius: 10px;
