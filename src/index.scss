@@ -1,0 +1,35 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'Helvetica Neue', arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --color-primary: #121212;
+  --color-secondary: #181818;
+  --color-ternary: #242424;
+  --color-text: #c0c0c0;
+  --header-height: 4rem;
+  --footer-height: 4rem;
+  --padding: 0.5rem 1.5rem 1rem 1.5rem;
+  background-color: var(--color-primary);
+}
+
+* {
+  box-sizing: border-box;
+  color: var(--color-text);
+}
+
+h1{
+  font-size: 1.5rem;
+}
+
+h2{
+  font-size: 1.15rem;
+}
+
+h3{
+  font-size: 1rem;
+}

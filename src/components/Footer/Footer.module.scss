@@ -1,0 +1,12 @@
+.footer {
+    margin-top: 2rem;
+    position: fixed;
+    bottom:0;
+    left:0;
+    height: var(--footer-height);
+    width: 100%;
+    border-top: solid 1px var(--color-ternary);
+    background-color: var(--color-primary);
+    padding: var(--padding);
+    z-index: 0;
+}

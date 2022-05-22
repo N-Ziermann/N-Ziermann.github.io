@@ -1,0 +1,29 @@
+.header {
+    background-color: var(--color-primary);
+    border-bottom: solid 1px var(--color-ternary);
+    padding: var(--padding);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: var(--header-height);
+    width: 100%;
+    align-items: flex-end;
+    z-index: 2;
+    
+    nav {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: end;
+    }
+    
+    a {
+        text-decoration: none;
+        color: var(--color-text);
+    }
+    
+    h1{
+        margin:0;
+    }
+}

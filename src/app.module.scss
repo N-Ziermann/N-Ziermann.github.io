@@ -1,0 +1,11 @@
+.main {
+    min-height: calc(100vh - var(--footer-height));
+    padding-top: var(--header-height);
+    position: relative;
+    z-index: 1;
+    background-color: var(--color-primary);
+}
+
+.footerSpacer {
+    height: calc(var(--footer-height) + 1.5rem);
+}

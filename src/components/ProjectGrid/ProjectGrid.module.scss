@@ -1,0 +1,15 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin: auto;
+    max-width: 40rem;
+
+    & > * {
+        aspect-ratio: 2 / 1.3;
+        font-weight: bold;
+        position: relative;
+        width: 100%;
+        margin: auto;
+    } 
+}
