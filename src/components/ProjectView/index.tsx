@@ -2,6 +2,7 @@ import Router from "preact-router";
 import { Section } from "../Section";
 import { MainView } from "../MainView"
 import { PiDeckProject } from "../PiDeckProject"
+import { FishingProject } from "../FishingProject"
 
 // eslint-disable-next-line no-unused-vars
 export function ProjectView(props: { path: string }) {
@@ -22,7 +23,6 @@ export function ProjectView(props: { path: string }) {
                         <p>The NES Color Picker is a tool developed for NES Developers. It offers a graphical user interface for creating the binary files needed to add colors to NES Games...</p>
                     </>
                 </Section>
-
                 <Section title="Love Potion" path="/project/lovePotion">
                     <>
                         <p>...</p>
@@ -35,7 +35,7 @@ export function ProjectView(props: { path: string }) {
                 </Section>
                 <Section title="Gameboy Fishing" path="/project/gameboyFishing">
                     <>
-                        <p>...</p>
+                        <FishingProject />
                     </>
                 </Section>
                 <Section title="No Project Specified or Project doesn't exist" path="/project/:rest*" />

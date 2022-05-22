@@ -21,6 +21,10 @@
     a {
         text-decoration: none;
         color: var(--color-text);
+
+        * {
+            fill: var(--color-text);
+        }
     }
     
     h1{
