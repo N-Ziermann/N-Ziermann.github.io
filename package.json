@@ -1,7 +1,7 @@
 {
   "name": "n-ziermann.github.io",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "dev": "vite --host",
     "build": "tsc && vite build",
