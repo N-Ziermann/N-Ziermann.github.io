@@ -1,0 +1,49 @@
+name: CI
+on:
+  push:
+    branches: [ "master" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14
+
+      - name: setup git config
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+      - name: Dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Increase version
+        run: npm version patch
+
+      - name: Save version
+        id: version
+        run: echo ::set-output name=tag::$(echo $(node -p -e "require('./package.json').version"))
+
+      - name: Push new version
+        run: git push
+      
+      - name: Login to DockerHub Registry
+        run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
+
+      - name: Build the tagged Docker image
+        run: docker build . --file Dockerfile --tag ziermann/portfolio:${{steps.version.outputs.tag}}
+      
+      - name: Push the tagged Docker image
+        run: docker push ziermann/portfolio:${{steps.version.outputs.tag}}
+      
+      - name: Build the latest Docker image
+        run: docker build . --file Dockerfile --tag ziermann/portfolio:latest
+      
+      - name: Push the latest Docker image
+        run: docker push ziermann/portfolio:latest

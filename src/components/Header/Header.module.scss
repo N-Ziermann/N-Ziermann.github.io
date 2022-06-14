@@ -31,3 +31,9 @@
         margin:0;
     }
 }
+
+@media (max-width: 600px) {
+	.header * {   
+        font-size: medium;
+    }
+}

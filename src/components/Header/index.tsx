@@ -7,11 +7,11 @@ import { Link } from "preact-router"
 export function Header() {
     return (
         <header className={styles.header}>
-            <h1>Niklas Ziermann</h1>
+            <Link href="/"><h1>Niklas Ziermann</h1></Link>
             <nav>
                 <Link href="/"><img src={home} /></Link>
                 <Link href="https://github.com/N-Ziermann" target="_blank"><img src={github} /></Link>
-                <Link href="#"><img src={youtube} /></Link>
+                <Link href="https://www.youtube.com/channel/UC18oah_ydLjqeCkAxNBNXXA" target="_blank"><img src={youtube} /></Link>
             </nav>
         </header>
     )

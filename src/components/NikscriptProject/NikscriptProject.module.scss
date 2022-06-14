@@ -1,0 +1,24 @@
+.buttons {
+    display: flex;
+    gap: 1rem;
+    margin: 0 0.5rem;
+    * {
+        color: black;
+        flex: 1;
+    }
+}
+
+.textareas {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    textarea {
+        background: none;
+        height: 50vh;
+        flex: 1;
+        resize: none;
+    }
+    & :last-child {
+        cursor: default;
+    }
+}

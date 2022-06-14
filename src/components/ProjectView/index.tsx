@@ -3,6 +3,8 @@ import { Section } from "../Section";
 import { MainView } from "../MainView"
 import { PiDeckProject } from "../PiDeckProject"
 import { FishingProject } from "../FishingProject"
+import { LovePotionProject } from "../LovePotionProject";
+import { NikscriptProject } from "../NikscriptProject"
 
 // eslint-disable-next-line no-unused-vars
 export function ProjectView(props: { path: string }) {
@@ -25,12 +27,12 @@ export function ProjectView(props: { path: string }) {
                 </Section>
                 <Section title="Love Potion" path="/project/lovePotion">
                     <>
-                        <p>...</p>
+                        <LovePotionProject />
                     </>
                 </Section>
                 <Section title="Nikscript" path="/project/nikscript">
                     <>
-                        <p>...</p>
+                        <NikscriptProject />
                     </>
                 </Section>
                 <Section title="Gameboy Fishing" path="/project/gameboyFishing">

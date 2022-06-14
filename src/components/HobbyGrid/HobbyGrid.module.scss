@@ -13,3 +13,9 @@
         margin: auto;
     } 
 }
+
+@media (max-width: 600px) {
+	.grid * {   
+        font-size: small;
+    }
+}

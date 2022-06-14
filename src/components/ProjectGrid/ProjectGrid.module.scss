@@ -11,5 +11,17 @@
         position: relative;
         width: 100%;
         margin: auto;
-    } 
+    }
+}
+
+@media (max-width: 600px) {
+	.grid {   
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+	.grid * {   
+        font-size: small;
+    }
 }
