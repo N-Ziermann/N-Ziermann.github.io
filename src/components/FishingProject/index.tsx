@@ -1,11 +1,11 @@
-import { useRef, useState } from "preact/hooks"
+import { MutableRef, useRef, useState } from "preact/hooks"
 import styles from "./FishingProject.module.scss";
 import { WasmBoy } from 'wasmboy';
-import game from "../../media/fishing.gb";
+import game from "../../media/gb/fishing.gb";
 import classNames from "classnames";
 
 export function FishingProject() {
-    const canvasRef = useRef<HTMLCanvasElement>();
+    const canvasRef = useRef<HTMLCanvasElement>() as MutableRef<HTMLCanvasElement>;
     const [running, setRunning] = useState(false)
 
     async function loadEmulator() {

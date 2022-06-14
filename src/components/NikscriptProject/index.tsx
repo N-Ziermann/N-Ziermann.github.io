@@ -49,7 +49,7 @@ print(fibonacci(5));`);
     return (
         <div>
             <div className={styles.textareas}>
-                <textarea value={code} onChange={e => setCode(e?.target?.value)} />
+                <textarea value={code} onChange={e => setCode((e?.target as HTMLTextAreaElement)?.value)} />
                 <textarea readOnly value={output} />
             </div>
             <div className={styles.buttons}>

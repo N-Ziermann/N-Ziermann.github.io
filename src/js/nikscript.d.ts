@@ -1,0 +1,1 @@
+export default function interpret(code: string, output: any): void;
