@@ -1,10 +1,13 @@
 import Router from "preact-router";
 import { Section } from "../Section";
-import { MainView } from "../MainView"
-import { PiDeckProject } from "../PiDeckProject"
-import { FishingProject } from "../FishingProject"
+import { MainView } from "../MainView";
+import { PiDeckProject } from "../PiDeckProject";
+import { FishingProject } from "../FishingProject";
 import { LovePotionProject } from "../LovePotionProject";
-import { NikscriptProject } from "../NikscriptProject"
+import { NikscriptProject } from "../NikscriptProject";
+import { PasswordManagerProject } from "../PasswordManagerProject";
+import { PaletteEditor } from "ziermann-nes-palette-editor";
+import styles from "./ProjectView.module.scss"
 
 // eslint-disable-next-line no-unused-vars
 export function ProjectView(props: { path: string }) {
@@ -15,15 +18,12 @@ export function ProjectView(props: { path: string }) {
                     <PiDeckProject />
                 </Section>
                 <Section title="Password Manager" path="/project/passwordManager">
-                    <>
-                        <p>A self written passsword manager website that implements encryption algorithms similarly to how LastPass does it.</p>
-                        <p>There no longer is an online example version running due to data protection reasons...</p>
-                    </>
+                    <PasswordManagerProject />
                 </Section>
-                <Section title="NES Color Picker" path="/project/colorPicker">
-                    <>
-                        <p>The NES Color Picker is a tool developed for NES Developers. It offers a graphical user interface for creating the binary files needed to add colors to NES Games...</p>
-                    </>
+                <Section title="" path="/project/colorPicker">
+                    <div className={styles.paletteEditor}>
+                        <PaletteEditor />
+                    </div>
                 </Section>
                 <Section title="Love Potion" path="/project/lovePotion">
                     <>

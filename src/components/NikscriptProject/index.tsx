@@ -1,11 +1,13 @@
 import interpret from "../../js/nikscript";
-import { useState, useRef } from "preact/hooks";
+import { useState, useRef, useEffect } from "preact/hooks";
 import styles from "./NikscriptProject.module.scss";
 
 export function NikscriptProject() {
     const [code, setCode] = useState("");
     const [output, setOutput] = useState("");
     const resultObject = useRef("");
+
+    useEffect(setFizzBuzz, []);
 
     function run() {
         interpret(code, resultObject);
